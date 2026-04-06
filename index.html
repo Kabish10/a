@@ -6,15 +6,10 @@
 <title>நம்ம ஊரு பாய் | Namma Ooru Paai</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lora:ital,wght@0,400;0,600;1,400&family=Noto+Sans+Tamil:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-:root {
-  --sand:#f5e9d0;--cream:#fdf6e8;--green:#3a6b35;--dgreen:#1e3d1a;
-  --gold:#c8952a;--brown:#7a4f2d;--dark:#1a1208;--accent:#e07b1a;
-  --wa:#25D366;--red:#e74c3c;
-}
+:root{--sand:#f5e9d0;--cream:#fdf6e8;--green:#3a6b35;--dgreen:#1e3d1a;--gold:#c8952a;--brown:#7a4f2d;--dark:#1a1208;--accent:#e07b1a;--wa:#25D366;--red:#e74c3c;}
 *{margin:0;padding:0;box-sizing:border-box;}
 body{background:var(--cream);color:var(--dark);font-family:'Lora',serif;overflow-x:hidden;}
 
-/* HERO */
 .hero{min-height:100vh;background:var(--dgreen);position:relative;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;overflow:hidden;padding:2rem;}
 .hero::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 8px,rgba(255,255,255,.03) 8px,rgba(255,255,255,.03) 9px),repeating-linear-gradient(90deg,transparent,transparent 8px,rgba(255,255,255,.03) 8px,rgba(255,255,255,.03) 9px);pointer-events:none;}
 .hero-badge{display:inline-block;background:var(--gold);color:var(--dark);font-family:'Noto Sans Tamil',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.4rem 1.2rem;border-radius:2rem;margin-bottom:1.5rem;animation:fadeDown .7s ease both;}
@@ -25,22 +20,19 @@ body{background:var(--cream);color:var(--dark);font-family:'Lora',serif;overflow
 .scroll-cta{margin-top:2.5rem;animation:fadeDown .8s .5s ease both,bounce 2s 1.5s infinite;color:var(--gold);font-size:.85rem;letter-spacing:.1em;display:flex;flex-direction:column;align-items:center;gap:.4rem;}
 .scroll-cta span{font-size:1.5rem;}
 
-/* STRIP */
 .features-strip{display:flex;justify-content:center;flex-wrap:wrap;background:var(--gold);padding:.9rem 1rem;}
 .feat-item{font-family:'Noto Sans Tamil',sans-serif;font-size:.8rem;font-weight:600;color:var(--dark);padding:0 1.5rem;border-right:1px solid rgba(0,0,0,.2);}
 .feat-item:last-child{border-right:none;}
 
-/* SECTION */
 .section{padding:4rem 1.5rem;max-width:1100px;margin:0 auto;}
 .section-label{font-family:'Noto Sans Tamil',sans-serif;font-size:.75rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--green);margin-bottom:.5rem;}
 .section-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.8rem);color:var(--dgreen);line-height:1.2;margin-bottom:.5rem;}
 .section-title span{font-family:'Noto Sans Tamil',sans-serif;color:var(--brown);font-size:.75em;}
 .divider{width:50px;height:3px;background:var(--gold);margin:1rem 0 2rem;border-radius:2px;}
 
-/* PRODUCTS */
 .category-title{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--dgreen);margin:2.5rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid var(--sand);display:flex;align-items:center;gap:.6rem;}
 .product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.2rem;}
-.product-card{background:white;border:1px solid rgba(0,0,0,.08);border-radius:12px;overflow:hidden;transition:transform .25s,box-shadow .25s;cursor:pointer;position:relative;}
+.product-card{background:white;border:1px solid rgba(0,0,0,.08);border-radius:12px;overflow:hidden;transition:transform .25s,box-shadow .25s;position:relative;}
 .product-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.12);}
 .product-card.popular::before{content:'⭐ Most Popular';position:absolute;top:10px;right:10px;background:var(--accent);color:white;font-size:.65rem;font-weight:700;padding:.25rem .6rem;border-radius:20px;z-index:2;}
 .card-visual{height:130px;display:flex;align-items:center;justify-content:center;font-size:3rem;overflow:hidden;}
@@ -58,7 +50,19 @@ body{background:var(--cream);color:var(--dark);font-family:'Lora',serif;overflow
 .btn-cart{width:100%;background:var(--green);color:white;border:none;padding:.65rem 1rem;border-radius:8px;font-size:.85rem;font-weight:600;cursor:pointer;transition:background .2s;font-family:'Lora',serif;}
 .btn-cart:hover{background:var(--dgreen);}
 
-/* CART BAR */
+/* Loading skeleton */
+.skeleton-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.2rem;}
+.skeleton-card{background:white;border-radius:12px;overflow:hidden;border:1px solid rgba(0,0,0,.06);}
+.skel{background:linear-gradient(90deg,#eee 25%,#f5f5f5 50%,#eee 75%);background-size:200% 100%;animation:shimmer 1.4s infinite;}
+.skel-vis{height:130px;}
+.skel-body{padding:1rem;}
+.skel-line{height:14px;border-radius:4px;margin-bottom:.7rem;}
+.skel-line.w80{width:80%;}
+.skel-line.w50{width:50%;}
+.skel-line.w60{width:60%;}
+.skel-btn{height:38px;border-radius:8px;margin-top:.5rem;}
+@keyframes shimmer{0%{background-position:200% 0;}100%{background-position:-200% 0;}}
+
 .cart-bar{position:fixed;bottom:0;left:0;right:0;background:var(--dgreen);color:white;padding:.8rem 1.5rem;display:flex;align-items:center;justify-content:space-between;z-index:100;transform:translateY(100%);transition:transform .35s;box-shadow:0 -4px 20px rgba(0,0,0,.2);}
 .cart-bar.visible{transform:translateY(0);}
 .cart-info{font-size:.9rem;}
@@ -66,7 +70,6 @@ body{background:var(--cream);color:var(--dark);font-family:'Lora',serif;overflow
 .cart-total{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--gold);}
 .btn-whatsapp{background:var(--wa);color:white;border:none;padding:.65rem 1.4rem;border-radius:8px;font-size:.9rem;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:.5rem;font-family:'Lora',serif;}
 
-/* MODALS */
 .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:200;display:none;align-items:flex-end;justify-content:center;}
 .modal-overlay.open{display:flex;}
 .modal{background:white;width:100%;max-width:520px;border-radius:20px 20px 0 0;padding:1.5rem;max-height:85vh;overflow-y:auto;animation:slideUp .3s ease;}
@@ -92,7 +95,6 @@ body{background:var(--cream);color:var(--dark);font-family:'Lora',serif;overflow
 .btn-order{width:100%;background:var(--wa);color:white;border:none;padding:.9rem;border-radius:10px;font-size:1rem;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.5rem;font-family:'Lora',serif;}
 .empty-cart{text-align:center;padding:2rem 0;color:#aaa;font-style:italic;}
 
-/* ABOUT + FOOTER */
 .about-block{background:var(--dgreen);color:var(--sand);padding:4rem 1.5rem;text-align:center;}
 .about-block .section-title{color:var(--sand);}
 .about-block .section-label{color:var(--gold);}
@@ -106,28 +108,52 @@ body{background:var(--cream);color:var(--dark);font-family:'Lora',serif;overflow
 footer{background:var(--dark);color:rgba(245,233,208,.7);text-align:center;padding:2rem 1.5rem;font-size:.82rem;line-height:1.8;}
 footer strong{color:var(--gold);}
 
-/* ═══════════ ADMIN ═══════════ */
+/* ═══ ADMIN ═══ */
 #adminBtn{position:fixed;top:14px;right:14px;z-index:300;background:rgba(0,0,0,.35);color:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.2);border-radius:8px;padding:.35rem .75rem;font-size:.72rem;cursor:pointer;backdrop-filter:blur(4px);font-family:'Lora',serif;}
 #adminBtn:hover{background:rgba(0,0,0,.6);color:white;}
 
-/* Login */
 #loginOverlay{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:500;display:none;align-items:center;justify-content:center;}
 #loginOverlay.open{display:flex;}
-.login-box{background:white;border-radius:16px;padding:2rem;width:300px;text-align:center;animation:slideUp .3s ease;}
-.login-box h3{font-family:'Playfair Display',serif;color:var(--dgreen);margin-bottom:1rem;}
+.login-box{background:white;border-radius:16px;padding:2rem;width:310px;text-align:center;animation:slideUp .3s ease;}
+.login-box h3{font-family:'Playfair Display',serif;color:var(--dgreen);margin-bottom:.3rem;}
+.login-box p{font-size:.8rem;color:#888;margin-bottom:1rem;}
 .login-box input{width:100%;padding:.7rem 1rem;border:1.5px solid #ddd;border-radius:8px;font-size:1rem;font-family:'Lora',serif;margin-bottom:.8rem;outline:none;}
 .login-box input:focus{border-color:var(--green);}
 .login-box .btn-login{width:100%;background:var(--dgreen);color:white;border:none;padding:.8rem;border-radius:8px;font-size:.95rem;font-weight:700;cursor:pointer;font-family:'Lora',serif;}
 .login-err{color:var(--red);font-size:.8rem;margin-bottom:.5rem;display:none;}
-.login-cancel{margin-top:.7rem;background:none;border:none;color:#999;font-size:.8rem;cursor:pointer;}
+.login-cancel{margin-top:.7rem;background:none;border:none;color:#999;font-size:.8rem;cursor:pointer;display:block;width:100%;}
 
-/* Admin full screen */
+/* SETUP WIZARD */
+#setupWizard{background:white;border-radius:16px;padding:2rem;width:min(500px,92vw);text-align:left;animation:slideUp .3s ease;max-height:90vh;overflow-y:auto;}
+#setupWizard h3{font-family:'Playfair Display',serif;color:var(--dgreen);margin-bottom:.5rem;font-size:1.3rem;}
+.setup-step{background:#f0f7f0;border-radius:10px;padding:1rem;margin:1rem 0;border-left:4px solid var(--green);}
+.setup-step h4{color:var(--dgreen);font-size:.9rem;margin-bottom:.4rem;}
+.setup-step p{font-size:.82rem;color:#555;line-height:1.6;}
+.setup-step a{color:var(--green);font-weight:700;}
+.setup-input-row{display:flex;flex-direction:column;gap:.4rem;margin-top:.8rem;}
+.setup-input-row label{font-size:.78rem;font-weight:700;color:#555;text-transform:uppercase;letter-spacing:.05em;}
+.setup-input-row input{padding:.6rem .9rem;border:1.5px solid #ddd;border-radius:8px;font-size:.9rem;font-family:'Lora',serif;outline:none;}
+.setup-input-row input:focus{border-color:var(--green);}
+.btn-setup-save{background:var(--green);color:white;border:none;padding:.75rem 1.5rem;border-radius:8px;font-size:.9rem;font-weight:700;cursor:pointer;font-family:'Lora',serif;margin-top:1rem;width:100%;}
+.setup-err{color:var(--red);font-size:.8rem;margin-top:.5rem;display:none;}
+.setup-already{font-size:.8rem;color:var(--green);margin-top:.5rem;display:none;}
+
 #adminPanel{position:fixed;inset:0;background:#f0f4f0;z-index:400;display:none;flex-direction:column;overflow:hidden;}
 #adminPanel.open{display:flex;}
 .admin-topbar{background:var(--dgreen);color:white;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;flex-wrap:wrap;gap:.5rem;}
 .admin-topbar h2{font-family:'Playfair Display',serif;font-size:1.1rem;}
-.admin-topbar-actions{display:flex;gap:.6rem;}
+.admin-topbar-actions{display:flex;gap:.6rem;flex-wrap:wrap;}
 .admin-body{flex:1;overflow-y:auto;padding:1.5rem;}
+.admin-hint{background:#fffbe6;border:1px solid #ffe58f;border-radius:10px;padding:1rem 1.2rem;margin-bottom:1.2rem;font-size:.83rem;color:#7a5c00;line-height:1.7;}
+.admin-hint strong{display:block;margin-bottom:.3rem;}
+.admin-saving{background:#e8f5e9;border:1px solid #a5d6a7;border-radius:10px;padding:.7rem 1rem;margin-bottom:1rem;font-size:.83rem;color:#2e7d32;display:none;align-items:center;gap:.5rem;}
+.admin-saving.show{display:flex;}
+.spinner{width:16px;height:16px;border:2px solid #a5d6a7;border-top-color:var(--green);border-radius:50%;animation:spin .7s linear infinite;flex-shrink:0;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.cloud-badge{display:inline-flex;align-items:center;gap:.3rem;background:#e8f5e9;color:#2e7d32;font-size:.72rem;font-weight:700;padding:.2rem .6rem;border-radius:20px;margin-left:.5rem;}
+.not-configured{background:#fff3cd;border:1px solid #ffc107;border-radius:10px;padding:1rem 1.2rem;margin-bottom:1.2rem;font-size:.85rem;color:#856404;}
+.not-configured button{background:var(--gold);color:white;border:none;padding:.4rem .9rem;border-radius:6px;font-size:.8rem;cursor:pointer;font-family:'Lora',serif;margin-top:.5rem;}
+
 .admin-product-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem;margin-bottom:1.5rem;}
 .admin-card{background:white;border-radius:12px;padding:1rem 1.2rem;border:1.5px solid #e0e8e0;display:flex;align-items:center;gap:1rem;}
 .admin-card.popular-badge{border-color:var(--accent);}
@@ -155,14 +181,11 @@ footer strong{color:var(--gold);}
 .btn-cancel-form{background:#eee;color:#555;border:none;padding:.7rem 1rem;border-radius:8px;font-size:.9rem;cursor:pointer;font-family:'Lora',serif;}
 .btn-add-new{background:var(--gold);color:white;border:none;padding:.65rem 1.2rem;border-radius:8px;font-size:.85rem;font-weight:700;cursor:pointer;font-family:'Lora',serif;}
 .btn-logout{background:rgba(255,255,255,.15);color:white;border:1px solid rgba(255,255,255,.3);padding:.4rem .9rem;border-radius:6px;font-size:.8rem;cursor:pointer;font-family:'Lora',serif;}
+.btn-settings{background:rgba(255,255,255,.1);color:rgba(255,255,255,.8);border:1px solid rgba(255,255,255,.2);padding:.4rem .9rem;border-radius:6px;font-size:.8rem;cursor:pointer;font-family:'Lora',serif;}
 .admin-empty{text-align:center;color:#aaa;padding:2rem;font-style:italic;}
-.admin-hint{background:#fffbe6;border:1px solid #ffe58f;border-radius:10px;padding:1rem 1.2rem;margin-bottom:1.2rem;font-size:.85rem;color:#7a5c00;line-height:1.7;}
-.admin-hint strong{display:block;margin-bottom:.3rem;font-size:.9rem;}
 
-/* TOAST */
-.success-toast{position:fixed;top:20px;left:50%;transform:translateX(-50%);background:var(--green);color:white;padding:.6rem 1.4rem;border-radius:20px;font-size:.85rem;z-index:1000;display:none;white-space:nowrap;}
+.success-toast{position:fixed;top:20px;left:50%;transform:translateX(-50%);background:var(--green);color:white;padding:.6rem 1.4rem;border-radius:20px;font-size:.85rem;z-index:1000;display:none;white-space:nowrap;box-shadow:0 4px 12px rgba(0,0,0,.2);}
 
-/* ANIMATIONS */
 @keyframes fadeDown{from{opacity:0;transform:translateY(-20px);}to{opacity:1;transform:translateY(0);}}
 @keyframes bounce{0%,100%{transform:translateY(0);}50%{transform:translateY(6px);}}
 @keyframes slideUp{from{transform:translateY(30px);opacity:0;}to{transform:translateY(0);opacity:1;}}
@@ -172,7 +195,6 @@ footer strong{color:var(--gold);}
 
 <button id="adminBtn" onclick="openLogin()">🔐 Admin</button>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-badge">🌿 100% Natural • Handmade • Plastic-Free</div>
   <div class="hero-tamil">நம்ம ஊரு பாய்</div>
@@ -194,7 +216,12 @@ footer strong{color:var(--gold);}
   <div class="section-label">Shop Our Collection</div>
   <div class="section-title">Find Your Perfect Mat <span>| உங்கள் பாய் தேர்வு</span></div>
   <div class="divider"></div>
-  <div id="shopContent"></div>
+  <div id="shopContent">
+    <!-- Skeleton loader -->
+    <div class="skeleton-grid">
+      ${[1,2,3,4].map(()=>`<div class="skeleton-card"><div class="skel skel-vis"></div><div class="skel-body"><div class="skel skel-line w80"></div><div class="skel skel-line w50"></div><div class="skel skel-line w60"></div><div class="skel skel-btn"></div></div></div>`).join('')}
+    </div>
+  </div>
 </div>
 
 <div class="custom-banner">
@@ -222,14 +249,12 @@ footer strong{color:var(--gold);}
   <span style="opacity:.5">© 2025 Namma Ooru Paai. All rights reserved.</span>
 </footer>
 
-<!-- CART BAR -->
 <div class="cart-bar" id="cartBar">
   <div class="cart-info"><span class="cart-count" id="cartCount">0</span> items in cart</div>
   <div class="cart-total" id="cartTotal">₹0</div>
   <button class="btn-whatsapp" onclick="openCartModal()">🛒 View Cart</button>
 </div>
 
-<!-- CART MODAL -->
 <div class="modal-overlay" id="modalOverlay" onclick="closeModalOnBg(event)">
   <div class="modal">
     <div class="modal-header">
@@ -245,41 +270,93 @@ footer strong{color:var(--gold);}
 <div id="loginOverlay" onclick="loginBgClose(event)">
   <div class="login-box">
     <h3>🔐 Owner Login</h3>
+    <p>Only for the shop owner</p>
     <div class="login-err" id="loginErr">Wrong password. Try again.</div>
     <input type="password" id="pwInput" placeholder="Enter password" onkeydown="if(event.key==='Enter')doLogin()">
     <button class="btn-login" onclick="doLogin()">Login</button>
-    <br><button class="login-cancel" onclick="closeLogin()">Cancel</button>
+    <button class="login-cancel" onclick="closeLogin()">Cancel</button>
   </div>
+</div>
+
+<!-- SETUP WIZARD (shown first time) -->
+<div id="loginOverlay" id="setupOverlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.8);z-index:600;align-items:center;justify-content:center;">
 </div>
 
 <!-- ADMIN PANEL -->
 <div id="adminPanel">
   <div class="admin-topbar">
-    <h2>🛠️ Manage Products</h2>
+    <h2>🛠️ Manage Products <span class="cloud-badge" id="cloudBadge" style="display:none">☁️ Cloud Saved</span></h2>
     <div class="admin-topbar-actions">
+      <button class="btn-settings" onclick="showSetup()">⚙️ Cloud Setup</button>
       <button class="btn-add-new" onclick="showAddForm()">＋ Add Product</button>
       <button class="btn-logout" onclick="logoutAdmin()">✕ Close</button>
     </div>
   </div>
   <div class="admin-body">
+    <div class="admin-saving" id="adminSaving"><div class="spinner"></div><span id="savingMsg">Saving to cloud...</span></div>
+    <div id="cloudStatus"></div>
     <div class="admin-hint">
-      <strong>👋 Welcome! Here's how to manage your products:</strong>
-      ➕ Click <b>"Add Product"</b> to add a new mat &nbsp;|&nbsp;
-      ✏️ Click <b>"Edit"</b> on any card to change name, size, or price &nbsp;|&nbsp;
-      🗑️ Click <b>"Delete"</b> to remove a product &nbsp;|&nbsp;
-      💾 All changes are <b>saved automatically</b> — customers see them instantly!
+      <strong>👋 How to manage products:</strong>
+      ➕ <b>Add Product</b> — add a new mat &nbsp;|&nbsp; ✏️ <b>Edit</b> — change price/size &nbsp;|&nbsp; 🗑️ <b>Delete</b> — remove product<br>
+      If Cloud is set up, changes are saved online and all customers see them instantly!
     </div>
     <div id="adminFormWrap" style="display:none;"></div>
     <div id="adminProductList"></div>
   </div>
 </div>
 
+<!-- SETUP MODAL (floating, inside loginOverlay style) -->
+<div id="setupModal" style="position:fixed;inset:0;background:rgba(0,0,0,.8);z-index:600;display:none;align-items:center;justify-content:center;padding:1rem;">
+  <div id="setupWizard">
+    <h3>☁️ Cloud Setup — One Time Only</h3>
+    <p style="font-size:.85rem;color:#666;margin-bottom:.5rem;">Do this once so product changes are visible to ALL customers on ANY phone/browser.</p>
+
+    <div class="setup-step">
+      <h4>Step 1 — Create a Free JSONBin Account</h4>
+      <p>Go to <a href="https://jsonbin.io" target="_blank">jsonbin.io</a> → Click <b>Sign Up</b> → Use your email → Verify email → Log in</p>
+    </div>
+
+    <div class="setup-step">
+      <h4>Step 2 — Get your API Key</h4>
+      <p>After login → Click your name (top right) → <b>API Keys</b> → Click <b>+ CREATE ACCESS KEY</b> → Give any name → <b>Copy the key</b></p>
+      <div class="setup-input-row">
+        <label>Paste your API Key here</label>
+        <input type="text" id="setupApiKey" placeholder="$2a$10$abc123..." value="">
+      </div>
+    </div>
+
+    <div class="setup-step">
+      <h4>Step 3 — Create a Bin (storage box)</h4>
+      <p>In JSONBin → Click <b>NEW BIN</b> (top menu) → Paste this inside: <code style="background:#f0f0f0;padding:.1rem .3rem;border-radius:3px;font-size:.8rem;">[]</code> → Click <b>CREATE BIN</b> → Copy the <b>BIN ID</b> from the URL (looks like: 6650abc123def...)</p>
+      <div class="setup-input-row">
+        <label>Paste your Bin ID here</label>
+        <input type="text" id="setupBinId" placeholder="6650abc123def456..." value="">
+      </div>
+    </div>
+
+    <div class="setup-step" style="background:#e8f5e9;border-color:var(--green);">
+      <h4>Step 4 — Set your Admin Password</h4>
+      <p>Choose a password to protect your Admin Panel</p>
+      <div class="setup-input-row">
+        <label>Admin Password</label>
+        <input type="password" id="setupPassword" placeholder="Choose a strong password" value="">
+      </div>
+    </div>
+
+    <div class="setup-err" id="setupErr">Please fill in all fields.</div>
+    <div class="setup-already" id="setupAlready">✅ Cloud already configured! You can update keys below.</div>
+    <button class="btn-setup-save" onclick="saveSetup()">💾 Save & Connect to Cloud</button>
+    <button class="login-cancel" onclick="closeSetup()" style="margin-top:.5rem;">Cancel</button>
+  </div>
+</div>
+
 <div class="success-toast" id="toast"></div>
 
 <script>
-const ADMIN_PASSWORD = 'paai2024';
 const WA_NUMBER = '916369450556';
-const STORAGE_KEY = 'nop_products_v2';
+const PRODUCTS_STORAGE = 'nop_products_v3';
+const CONFIG_STORAGE   = 'nop_config_v1';
+const JSONBIN_BASE     = 'https://api.jsonbin.io/v3/b';
 
 const DEFAULT_PRODUCTS = [
   {id:'p1',name:'Prayer Mat',size:'2 x 2 ft',price:349,use:'Prayer / Pooja',icon:'🙏',category:'prayer',popular:false},
@@ -293,22 +370,75 @@ const DEFAULT_PRODUCTS = [
 ];
 
 const CATEGORIES = [
-  {key:'prayer',  label:'Prayet Mats', emoji:'🛕 Prayer Mats — விரிப்பு'},
-  {key:'standard',label:'Standard Mats', emoji:'🏠 Standard Mats — அலங்காரம்'},
-  {key:'strong',  label:'Extra Strong Mats', emoji:'💪 Extra Strong Mats — தூக்கும் பாய்'},
-  {key:'family',  label:'Family Mats', emoji:'👨‍👩‍👧‍👦 Family Mats — குடும்ப பாய்'},
-  {key:'other',   label:'Other Products', emoji:'🌿 Other Products'},
+  {key:'prayer',  emoji:'🛕 Prayer Mats — விரிப்பு'},
+  {key:'standard',emoji:'🏠 Standard Mats — அலங்காரம்'},
+  {key:'strong',  emoji:'💪 Extra Strong Mats — தூக்கும் பாய்'},
+  {key:'family',  emoji:'👨‍👩‍👧‍👦 Family Mats — குடும்ப பாய்'},
+  {key:'other',   emoji:'🌿 Other Products'},
 ];
 
-function loadProducts(){
-  try{const s=localStorage.getItem(STORAGE_KEY);return s?JSON.parse(s):DEFAULT_PRODUCTS;}
+// ─── CONFIG ───
+function getConfig(){
+  try{return JSON.parse(localStorage.getItem(CONFIG_STORAGE))||{};}catch(e){return{};}
+}
+function isCloudConfigured(){
+  const c=getConfig();return !!(c.apiKey&&c.binId&&c.password);
+}
+
+// ─── PRODUCTS ───
+let products=[];
+
+async function loadProductsFromCloud(){
+  const c=getConfig();
+  if(!c.apiKey||!c.binId){
+    // Fallback to local
+    products=loadLocal();
+    renderShop();
+    return;
+  }
+  try{
+    const r=await fetch(`${JSONBIN_BASE}/${c.binId}/latest`,{
+      headers:{'X-Master-Key':c.apiKey,'X-Bin-Meta':false}
+    });
+    if(!r.ok)throw new Error('fetch failed');
+    const data=await r.json();
+    products=Array.isArray(data)&&data.length>0?data:DEFAULT_PRODUCTS;
+    saveLocal(products);
+  }catch(e){
+    console.warn('Cloud load failed, using local:',e);
+    products=loadLocal();
+  }
+  renderShop();
+}
+
+async function saveProductsToCloud(prods){
+  const c=getConfig();
+  saveLocal(prods);
+  if(!c.apiKey||!c.binId)return false;
+  showSaving('Saving to cloud...');
+  try{
+    const r=await fetch(`${JSONBIN_BASE}/${c.binId}`,{
+      method:'PUT',
+      headers:{'Content-Type':'application/json','X-Master-Key':c.apiKey},
+      body:JSON.stringify(prods)
+    });
+    if(!r.ok)throw new Error('save failed');
+    hideSaving();
+    return true;
+  }catch(e){
+    hideSaving();
+    showToast('⚠️ Saved locally only. Check internet/cloud settings.');
+    return false;
+  }
+}
+
+function loadLocal(){
+  try{const s=localStorage.getItem(PRODUCTS_STORAGE);return s?JSON.parse(s):DEFAULT_PRODUCTS;}
   catch(e){return DEFAULT_PRODUCTS;}
 }
-function saveProducts(p){localStorage.setItem(STORAGE_KEY,JSON.stringify(p));}
+function saveLocal(p){localStorage.setItem(PRODUCTS_STORAGE,JSON.stringify(p));}
 
-let products=loadProducts();
-
-// ─── SHOP ───
+// ─── SHOP RENDER ───
 function renderShop(){
   const wrap=document.getElementById('shopContent');
   let html='';
@@ -336,7 +466,6 @@ function renderShop(){
 
 // ─── CART ───
 const cart={};
-
 function addToCart(btn){
   const id=btn.closest('.product-card').dataset.id;
   cart[id]=(cart[id]||0)+1;
@@ -345,31 +474,23 @@ function addToCart(btn){
   btn.style.background='var(--gold)';
   setTimeout(()=>{btn.textContent='Add to Cart 🛒';btn.style.background='';},1200);
 }
-
 function updateCartUI(){
   const count=Object.values(cart).reduce((a,b)=>a+b,0);
-  const total=Object.entries(cart).reduce((s,[id,qty])=>{
-    const p=products.find(x=>x.id===id);return s+(p?p.price*qty:0);},0);
+  const total=Object.entries(cart).reduce((s,[id,qty])=>{const p=products.find(x=>x.id===id);return s+(p?p.price*qty:0);},0);
   document.getElementById('cartCount').textContent=count;
   document.getElementById('cartTotal').textContent='₹'+total.toLocaleString('en-IN');
   document.getElementById('cartBar').classList.toggle('visible',count>0);
 }
-
 function openCartModal(){renderModal();document.getElementById('modalOverlay').classList.add('open');}
 function closeModal(){document.getElementById('modalOverlay').classList.remove('open');}
 function closeModalOnBg(e){if(e.target===document.getElementById('modalOverlay'))closeModal();}
-
 function renderModal(){
   const list=document.getElementById('cartItemsList');
   const footer=document.getElementById('cartFooter');
   const ids=Object.keys(cart).filter(id=>cart[id]>0);
-  if(!ids.length){
-    list.innerHTML='<div class="empty-cart">Your cart is empty 🌿<br>Add some mats to get started!</div>';
-    footer.innerHTML='';return;
-  }
+  if(!ids.length){list.innerHTML='<div class="empty-cart">Your cart is empty 🌿<br>Add some mats!</div>';footer.innerHTML='';return;}
   list.innerHTML=ids.map(id=>{
-    const p=products.find(x=>x.id===id);if(!p)return'';
-    const qty=cart[id];
+    const p=products.find(x=>x.id===id);if(!p)return'';const qty=cart[id];
     return `<div class="cart-item">
       <div class="ci-icon">${p.icon}</div>
       <div class="ci-info"><div class="ci-name">${p.name}</div><div class="ci-size">${p.size}</div></div>
@@ -388,7 +509,7 @@ function renderModal(){
     <div class="total-row"><span>Subtotal (${totalQty} item${totalQty>1?'s':''})</span><span>₹${subtotal.toLocaleString('en-IN')}</span></div>
     <div class="total-row"><span>Courier charges</span><span>As applicable</span></div>
     <div class="total-row grand"><span>Total</span><span>₹${subtotal.toLocaleString('en-IN')}+</span></div>
-    <p class="note-text">* Exact courier cost confirmed on WhatsApp</p>
+    <p class="note-text">* Courier cost confirmed on WhatsApp</p>
     <button class="btn-order" id="waOrderBtn">
       <svg width="18" height="18" viewBox="0 0 32 32" fill="white"><path d="M16 0C7.164 0 0 7.163 0 16c0 2.82.736 5.467 2.018 7.766L0 32l8.44-2.013A15.93 15.93 0 0016 32c8.836 0 16-7.163 16-16S24.836 0 16 0zm8.14 22.258c-.34.957-1.998 1.83-2.758 1.946-.707.108-1.6.153-2.58-.16-.595-.192-1.359-.447-2.34-.876-4.116-1.778-6.8-5.923-7.003-6.197-.203-.273-1.657-2.204-1.657-4.204 0-2 1.05-2.986 1.423-3.393.373-.408.814-.51 1.085-.51h.78c.25 0 .59-.094.922.705l1.32 3.207c.11.264.183.574-.02.878l-.49.717-.367.473c-.203.255-.414.533-.178.975.236.44 1.048 1.72 2.25 2.787 1.547 1.375 2.85 1.8 3.29 2.003.44.203.695.17.952-.102l1.088-1.226c.274-.318.543-.254.916-.102l2.87 1.35c.407.192.68.285.78.443.1.16.1.92-.24 1.878z"/></svg>
       Order on WhatsApp
@@ -398,19 +519,16 @@ function renderModal(){
     window.open('https://wa.me/'+WA_NUMBER+'?text='+encodeURIComponent(buildOrderText(ids)),'_blank');
   });
 }
-
 function changeQty(id,delta){
-  cart[id]=(cart[id]||0)+delta;
-  if(cart[id]<=0)delete cart[id];
-  updateCartUI();
-  Object.keys(cart).length?renderModal():setTimeout(closeModal,300);
+  cart[id]=(cart[id]||0)+delta;if(cart[id]<=0)delete cart[id];
+  updateCartUI();Object.keys(cart).length?renderModal():setTimeout(closeModal,300);
 }
 function removeItem(id){
   delete cart[id];updateCartUI();
   if(!Object.keys(cart).length){renderModal();setTimeout(closeModal,300);}else renderModal();
 }
 function buildOrderText(ids){
-  const lines=ids.map(id=>{const p=products.find(x=>x.id===id);return `• ${p.name} (${p.size}) x${cart[id]} = Rs.${(p.price*cart[id]).toLocaleString('en-IN')}`;});
+  const lines=ids.map(id=>{const p=products.find(x=>x.id===id);return `* ${p.name} (${p.size}) x${cart[id]} = Rs.${(p.price*cart[id]).toLocaleString('en-IN')}`;});
   const sub=ids.reduce((s,id)=>{const p=products.find(x=>x.id===id);return s+(p?p.price*cart[id]:0);},0);
   return `Hello! Order from Namma Ooru Paai:\n\n${lines.join('\n')}\n\nSubtotal: Rs.${sub.toLocaleString('en-IN')} + courier\n\nPlease confirm and share courier cost. Thank you!`;
 }
@@ -426,7 +544,9 @@ function openLogin(){
 function closeLogin(){document.getElementById('loginOverlay').classList.remove('open');}
 function loginBgClose(e){if(e.target===document.getElementById('loginOverlay'))closeLogin();}
 function doLogin(){
-  if(document.getElementById('pwInput').value===ADMIN_PASSWORD){
+  const c=getConfig();
+  const correctPw=c.password||'paai2024';
+  if(document.getElementById('pwInput').value===correctPw){
     closeLogin();openAdminPanel();
   }else{
     document.getElementById('loginErr').style.display='block';
@@ -436,60 +556,65 @@ function doLogin(){
 }
 
 // ─── ADMIN PANEL ───
-function openAdminPanel(){document.getElementById('adminPanel').classList.add('open');renderAdminList();}
+function openAdminPanel(){
+  document.getElementById('adminPanel').classList.add('open');
+  // Show cloud badge if configured
+  const configured=isCloudConfigured();
+  document.getElementById('cloudBadge').style.display=configured?'':'none';
+  // Cloud status banner
+  const statusDiv=document.getElementById('cloudStatus');
+  if(!configured){
+    statusDiv.innerHTML=`<div class="not-configured">
+      ⚠️ <b>Cloud not set up yet.</b> Changes save only on this phone/browser right now.<br>
+      Set up cloud storage so ALL customers see your products from any device.
+      <br><button onclick="showSetup()">☁️ Set Up Cloud (Free, 5 min)</button>
+    </div>`;
+  }else{
+    statusDiv.innerHTML='';
+  }
+  renderAdminList();
+}
 function logoutAdmin(){document.getElementById('adminPanel').classList.remove('open');hideForm();}
 
 function renderAdminList(){
   const wrap=document.getElementById('adminProductList');
   if(!products.length){wrap.innerHTML='<div class="admin-empty">No products yet. Click "+ Add Product" above!</div>';return;}
-  wrap.innerHTML='<div class="admin-product-list">'+products.map(p=>`
-    <div class="admin-card${p.popular?' popular-badge':''}">
+  wrap.innerHTML='<div class="admin-product-list">'+
+    products.map(p=>`<div class="admin-card${p.popular?' popular-badge':''}">
       <div class="admin-card-icon">${p.icon}</div>
       <div class="admin-card-info">
         <div class="admin-card-name">${p.name}${p.popular?' ⭐':''}</div>
-        <div class="admin-card-meta">${p.size} &nbsp;|&nbsp; ${p.use}</div>
-        <div class="admin-card-price">₹${Number(p.price).toLocaleString('en-IN')}</div>
+        <div class="admin-card-meta">${p.size} | ${p.use}</div>
+        <div class="admin-card-price">&#8377;${Number(p.price).toLocaleString('en-IN')}</div>
       </div>
       <div class="admin-card-actions">
         <button class="btn-edit" onclick="showEditForm('${p.id}')">✏️ Edit</button>
-        <button class="btn-delete" onclick="deleteProduct('${p.id}')">🗑️ Delete</button>
+        <button class="btn-delete" onclick="deleteProduct('${p.id}')">🗑️ Del</button>
       </div>
-    </div>`).join('')+'</div>';
+    </div>`).join('')+
+  '</div>';
 }
 
 function showAddForm(){
   renderForm(null);
   const fw=document.getElementById('adminFormWrap');
-  fw.style.display='block';
-  fw.scrollIntoView({behavior:'smooth'});
+  fw.style.display='block';fw.scrollIntoView({behavior:'smooth'});
 }
 function showEditForm(id){
   renderForm(products.find(x=>x.id===id));
   const fw=document.getElementById('adminFormWrap');
-  fw.style.display='block';
-  fw.scrollIntoView({behavior:'smooth'});
+  fw.style.display='block';fw.scrollIntoView({behavior:'smooth'});
 }
-
 function renderForm(p){
   const isEdit=!!p;
   document.getElementById('adminFormWrap').innerHTML=`
   <div class="admin-form-wrap">
     <h3>${isEdit?'✏️ Edit Product':'➕ Add New Product'}</h3>
     <div class="form-grid">
-      <div class="form-group">
-        <label>Product Name *</label>
-        <input type="text" id="f_name" placeholder="e.g. Prayer Mat" value="${isEdit?p.name:''}">
-      </div>
-      <div class="form-group">
-        <label>Size *</label>
-        <input type="text" id="f_size" placeholder="e.g. 6 x 4 ft" value="${isEdit?p.size:''}">
-      </div>
-      <div class="form-group">
-        <label>Price in Rupees *</label>
-        <input type="number" id="f_price" placeholder="e.g. 1299" value="${isEdit?p.price:''}">
-      </div>
-      <div class="form-group">
-        <label>Category *</label>
+      <div class="form-group"><label>Product Name *</label><input id="f_name" placeholder="e.g. Prayer Mat" value="${isEdit?p.name:''}"></div>
+      <div class="form-group"><label>Size *</label><input id="f_size" placeholder="e.g. 6 x 4 ft" value="${isEdit?p.size:''}"></div>
+      <div class="form-group"><label>Price (₹) *</label><input type="number" id="f_price" placeholder="e.g. 1299" value="${isEdit?p.price:''}"></div>
+      <div class="form-group"><label>Category *</label>
         <select id="f_cat">
           <option value="prayer"${isEdit&&p.category==='prayer'?' selected':''}>🛕 Prayer Mats</option>
           <option value="standard"${isEdit&&p.category==='standard'?' selected':''}>🏠 Standard Mats</option>
@@ -498,20 +623,10 @@ function renderForm(p){
           <option value="other"${isEdit&&p.category==='other'?' selected':''}>🌿 Other</option>
         </select>
       </div>
-      <div class="form-group">
-        <label>Use / Description</label>
-        <input type="text" id="f_use" placeholder="e.g. Sleeping / Prayer" value="${isEdit?p.use:''}">
-      </div>
-      <div class="form-group">
-        <label>Icon (Emoji)</label>
-        <input type="text" id="f_icon" placeholder="e.g. 🙏" value="${isEdit?p.icon:'🌿'}" maxlength="4">
-      </div>
-      <div class="form-group full">
-        <label>&nbsp;</label>
-        <div class="checkbox-row">
-          <input type="checkbox" id="f_popular"${isEdit&&p.popular?' checked':''}>
-          <span>Mark as "Most Popular" — shows an orange badge on this product</span>
-        </div>
+      <div class="form-group"><label>Use / Description</label><input id="f_use" placeholder="e.g. Sleeping" value="${isEdit?p.use:''}"></div>
+      <div class="form-group"><label>Emoji Icon</label><input id="f_icon" placeholder="🙏" value="${isEdit?p.icon:'🌿'}" maxlength="4"></div>
+      <div class="form-group full"><label>&nbsp;</label>
+        <div class="checkbox-row"><input type="checkbox" id="f_popular"${isEdit&&p.popular?' checked':''}><span>Mark as "Most Popular"</span></div>
       </div>
     </div>
     <div class="form-actions">
@@ -520,13 +635,9 @@ function renderForm(p){
     </div>
   </div>`;
 }
+function hideForm(){document.getElementById('adminFormWrap').style.display='none';document.getElementById('adminFormWrap').innerHTML='';}
 
-function hideForm(){
-  document.getElementById('adminFormWrap').style.display='none';
-  document.getElementById('adminFormWrap').innerHTML='';
-}
-
-function saveProduct(editId){
+async function saveProduct(editId){
   const name=document.getElementById('f_name').value.trim();
   const size=document.getElementById('f_size').value.trim();
   const price=parseFloat(document.getElementById('f_price').value);
@@ -541,32 +652,80 @@ function saveProduct(editId){
   }else{
     products.push({id:'prod_'+Date.now(),name,size,price,category:cat,use,icon,popular:pop});
   }
-  saveProducts(products);
-  renderShop();
-  renderAdminList();
   hideForm();
-  showToast(editId?'✅ Product updated!':'✅ New product added!');
+  renderShop();renderAdminList();
+  const ok=await saveProductsToCloud(products);
+  showToast(ok?(editId?'✅ Updated & saved to cloud!':'✅ Added & saved to cloud!'):(editId?'✅ Updated locally':'✅ Added locally'));
 }
 
-function deleteProduct(id){
+async function deleteProduct(id){
   const p=products.find(x=>x.id===id);
   if(!confirm('Delete "'+p.name+' ('+p.size+')"?\nThis cannot be undone.'))return;
   products=products.filter(x=>x.id!==id);
   if(cart[id]){delete cart[id];updateCartUI();}
-  saveProducts(products);
-  renderShop();
-  renderAdminList();
-  showToast('🗑️ Product deleted.');
+  renderShop();renderAdminList();
+  const ok=await saveProductsToCloud(products);
+  showToast(ok?'🗑️ Deleted from cloud':'🗑️ Deleted locally');
 }
 
+// ─── SETUP WIZARD ───
+function showSetup(){
+  const c=getConfig();
+  if(c.apiKey)document.getElementById('setupApiKey').value=c.apiKey;
+  if(c.binId)document.getElementById('setupBinId').value=c.binId;
+  if(c.password)document.getElementById('setupPassword').value=c.password;
+  if(isCloudConfigured())document.getElementById('setupAlready').style.display='block';
+  document.getElementById('setupModal').style.display='flex';
+}
+function closeSetup(){document.getElementById('setupModal').style.display='none';}
+
+async function saveSetup(){
+  const apiKey=document.getElementById('setupApiKey').value.trim();
+  const binId=document.getElementById('setupBinId').value.trim();
+  const password=document.getElementById('setupPassword').value.trim();
+  const errEl=document.getElementById('setupErr');
+  if(!apiKey||!binId||!password){errEl.style.display='block';errEl.textContent='Please fill in all 3 fields.';return;}
+  errEl.style.display='none';
+  // Test the connection
+  showToast('Testing connection...');
+  try{
+    const r=await fetch(`${JSONBIN_BASE}/${binId}/latest`,{
+      headers:{'X-Master-Key':apiKey,'X-Bin-Meta':false}
+    });
+    if(!r.ok)throw new Error('Connection failed. Check your API Key and Bin ID.');
+    // Save config
+    localStorage.setItem(CONFIG_STORAGE,JSON.stringify({apiKey,binId,password}));
+    // Push current products to cloud
+    await fetch(`${JSONBIN_BASE}/${binId}`,{
+      method:'PUT',
+      headers:{'Content-Type':'application/json','X-Master-Key':apiKey},
+      body:JSON.stringify(products)
+    });
+    closeSetup();
+    document.getElementById('cloudBadge').style.display='';
+    document.getElementById('cloudStatus').innerHTML='';
+    showToast('🎉 Cloud connected! All changes now save live for everyone!');
+  }catch(e){
+    errEl.style.display='block';
+    errEl.textContent='Error: '+e.message+'. Please check your API Key and Bin ID.';
+  }
+}
+
+// ─── UI HELPERS ───
+function showSaving(msg){
+  const s=document.getElementById('adminSaving');
+  document.getElementById('savingMsg').textContent=msg;
+  s.classList.add('show');
+}
+function hideSaving(){document.getElementById('adminSaving').classList.remove('show');}
 function showToast(msg){
   const t=document.getElementById('toast');
   t.textContent=msg;t.style.display='block';
-  setTimeout(()=>t.style.display='none',2500);
+  setTimeout(()=>t.style.display='none',3000);
 }
 
-// INIT
-renderShop();
+// ─── INIT ───
+loadProductsFromCloud();
 </script>
 </body>
 </html>
